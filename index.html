@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.hii/friends.greet</title>
+    <link rel="icon" href="./assets/icon.png">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(-20deg,magenta,white,yellow,aqua,yellow,white,magenta);
+            min-height: 100vh;
+	    width:100%;
+	    padding:5px;
+	    border:5px groove white;
+            font-family: sans-serif;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(170,20,240,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px;
+	    
+	    position:sticky;
+	    top:2px;
+	    z-index:10;
+        }
+        header a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+       img {
+            width: 130px;
+	    height: 150px;
+	    object-fit: cover;
+            border-radius: 100%;
+            border: 2px groove magenta;
+        }
+        section {
+            padding: 20px;
+	    border:3px groove black;
+	    background-color:rgba(100,110,200,0.3)
+        }
+	#header2{
+	    display:flex;
+	    justify-content:center;
+	    width:100%;
+	    max-height:;
+	    border:3px groove black;
+	    padding:2px;
+	}
+	#bio{
+	 
+	  max-width:30%;
+	  max-height:200px;  
+	 }
+	#greet{text-align:center;}
+	.flower {
+    position: fixed;
+    top: -50px;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear forwards;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(105vh) rotate(360deg);
+      opacity: 0.2;
+    }
+  }
+    </style>
+</head>
+<body>
+    <header>
+	<a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact_me">Contact Me!</a>
+    </header>
+    <audio id="music" loop>
+             <source src="./assets/vibe.mp3">
+        </audio>
+    <h2 id="greet">-------- Welcome To The My World ! --------</h2>
+    <div id="header2">
+	<img src="./assets/profile_image.png" alt="Profile">
+    </div>
+    <section id="about">
+	<h2>About</h2><br/>
+	<p>
+        Hi I'm Sameer !<br/>
+        A very simple & tech-minded student,<br/>
+        Coming from a humble & loving family background.<br/>
+	Belongs to a small village in Bhadohi city.
+        </p><br/>
+	<ul id="hobby"><h3>Special Features !</h3><br/>
+            <li></li>
+            <li>IntrOverThinker !</li>
+            <li>Kam chor !</li>
+            <li>Faithfull !</li>
+	    <li>Strong Emotions !</li>
+
+    </section>
+    <section id="skills">
+        <h2>Skills</h2><br/>
+	<ul>
+            <li>HTML Fundamentals</li>
+            <li>CSS Fundamentals</li>
+            <li>JAVA SCRIPT (Fundamentals with DOM & BOM)</li>
+            <li>fetch API ("GET","POST","UPDATE","DELETE")</li>
+            <li>MYSQL & POSTGRESQL Fundamentals</li>
+            <li>C Programming Fundamentals</li>
+            <li>DSA USING C Language</li>
+            <li>Python (Fundamentals with OOP,s, file handling, exception handling)</li>
+            <li>Java Fundamentals</li>
+	    <li>Computer vission</li>
+	    <li>Android app development</li>
+	</ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2><br/>
+        <h3>Here are some of the things I've built:</h3><br/>
+        <ul>
+	    
+	    <li>Smart attendence System {Full stack}/ Based on Webpage,python,computervision</li><br/>
+	    <li>Lift Sharing -- Under Development / Web App </li>
+            <li>Warranty Management System -- Under Development / Web App</li>
+            <li>LMS with whatsapp & gmail notification -- Under Development / Web App</li>
+        </ul>
+    </section>
+
+    <section id="contact_me">
+        <h2>Contact Me!</h2><br/>
+        <p>Feel free to reach out for collaborations or project discussions.</p><br/>
+        <p>Email: devolopersameer@gmail.com</p>
+	<button onclick="wr()">Whatsapp !</button>
+</section>
+</body>
+<script>
+  document.addEventListener('click',function(){
+   const audio=document.getElementById('music');
+  audio.volume=0.4;
+   audio.play();
+	const flowers = ['🌸', '💮', '🌹', '🌺', '', '🍃'];
+    
+    setInterval(() => {
+      for (let i = 0; i < 4; i++) { // Ek baar me 4 phool
+        const f = document.createElement('div');
+        f.className = 'flower';
+        f.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+        f.style.left = Math.random() * 100 + 'vw';
+        f.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        f.style.fontSize = (Math.random() * 15 + 15) + 'px';
+        
+        document.body.appendChild(f);
+        setTimeout(() => f.remove(), 4000);
+      }
+    }, 1000);
+  },{once:true});
+  function wr() {
+    window.location.href = "https://wa.me/917860633489?text=Hello%20Sameer%20...";
+  }
+</script>
+</html>
+
