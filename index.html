@@ -7,97 +7,9 @@
 	<meta name="author" content="sameer,devsameer, developer sameer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEVELOPER SAMEER |A Computer Science Student</title>
-    <link rel="icon" href="./assets/icon.png">
-    <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
-        body {
-            background: linear-gradient(-20deg,magenta,white,yellow,aqua,yellow,white,magenta);
-            min-height: 100vh;
-	    width:100%;
-	    padding:5px;
-	    border:5px groove white;
-            font-family: sans-serif;
-            background-attachment: fixed;
-        }
-        header {
-            background-color: rgba(170,20,240,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 10px;
-	    
-	    position:sticky;
-	    top:2px;
-	    z-index:10;
-        }
-        header a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-       img {
-            width: 130px;
-	    height: 150px;
-	    object-fit: cover;
-            border-radius: 100%;
-            border: 2px groove magenta;
-        }
-        section {
-            padding: 20px;
-	    border:3px groove black;
-	    background-color:rgba(100,110,200,0.3)
-        }
-	#header2{
-	    display:flex;
-	    justify-content:center;
-	    width:100%;
-	    max-height:;
-	    border:3px groove black;
-	    padding:2px;
-	}
-	#bio{
-	 
-	  max-width:30%;
-	  max-height:200px;  
-	 }
-	#greet{text-align:center;}
-	.flower {
-    position: fixed;
-    top: -50px;
-    z-index: 9999;
-    user-select: none;
-    pointer-events: none;
-    animation: fall linear forwards;
-  }
-		footer {
-  text-align: center;
-  padding: 20px;
-  font-family: inherit;
-}
+    <link rel="icon" href="./assets/icon.png"/>
+	<link rel="stylesheet" href="style.css"/>
 
-.visitor-counter p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 8px;
-		}
-
-  @keyframes fall {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(105vh) rotate(360deg);
-      opacity: 0.2;
-    }
-  }
-    </style>
 </head>
 <body>
     <header>
@@ -174,31 +86,7 @@
     </p>
   </div>
 </footer>
+    <script src="script.js"></script>
 </body>
-<script>
-  document.addEventListener('click',function(){
-   const audio=document.getElementById('music');
-  audio.volume=0.4;
-   audio.play();
-	const flowers = ['🌸', '💮', '🌹', '🌺', '🍁', '🍃'];
-    
-    setInterval(() => {
-      for (let i = 0; i < 4; i++) {
-        const f = document.createElement('div');
-        f.className = 'flower';
-        f.innerText = flowers[Math.floor(Math.random() * flowers.length)];
-        f.style.left = Math.random() * 100 + 'vw';
-        f.style.animationDuration = (Math.random() * 2 + 2) + 's';
-        f.style.fontSize = (Math.random() * 15 + 15) + 'px';
-        
-        document.body.appendChild(f);
-        setTimeout(() => f.remove(), 4000);
-      }
-    }, 1000);
-  },{once:true});
-  function wr() {
-    window.location.href = "https://wa.me/917860633489?text=Hello%20Sameer%20...";
-  }
-</script>
 </html>
 
