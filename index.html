@@ -73,6 +73,19 @@
     pointer-events: none;
     animation: fall linear forwards;
   }
+		footer {
+  text-align: center;
+  padding: 20px;
+  font-family: inherit;
+}
+
+.visitor-counter p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
 
   @keyframes fall {
     0% {
@@ -148,8 +161,16 @@
         <h2>Contact Me!</h2><br/>
         <p>Feel free to reach out for collaborations or project discussions.</p><br/>
         <p>Email: devolopersameer@gmail.com</p>
-	<button onclick="wr()">Whatsapp !</button>
-</section>
+	    <button onclick="wr()">Whatsapp !</button>
+    </section>
+	<footer>
+  <p>© 2026 Sameer. All rights reserved.</p>
+  <div class="visitor-counter">
+    <p>Total Visits: 
+      <img src="https://hits.sh/portfolio.devolopersameer.workers.dev.svg?label=Visitors&color=007acc" alt="Visitor Counter" />
+    </p>
+  </div>
+	</footer>
 </body>
 <script>
   document.addEventListener('click',function(){
