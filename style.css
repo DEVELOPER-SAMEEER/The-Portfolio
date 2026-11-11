@@ -48,15 +48,21 @@
 	    border:3px groove black;
 	    padding:2px;
 	}
-	#bio{
-	 
-	  max-width:30%;
-	  max-height:200px;  
-	 }
+	button {
+  	    background-color: #25D366;
+	    color: white;
+	    border: none;
+	    padding: 6px 14px;
+	    border-radius: 20px;
+  	    font-weight: 600;
+	    cursor: pointer;
+	    margin-top: 8px;
+}
+
 	#greet{text-align:center;}
 	.flower {
-    position: fixed;
-    top: -50px;
+	     position: fixed;
+	     top: -50px;
     z-index: 9999;
     user-select: none;
     pointer-events: none;
